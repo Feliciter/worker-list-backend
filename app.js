@@ -20,8 +20,9 @@ app.use('/employees', require('./employees/employee.controller'));
 app.use(errorHandler);
 
 // start server
-const port =  process.env.MONGODB_URI === 'production' ? (process.env.PORT || 80) : 4000;
+//const port =  process.env.MONGODB_URI === 'production' ? (process.env.PORT || 80) : 4000;
 //const port = process.env.MONGODB_URI || 'mongodb://localhost:27017/cookbookmean'
+const port = process.env.PORT || 3000;
 
 const server = app.listen(port, function () {
     console.log('Server listening on port ' + port);
